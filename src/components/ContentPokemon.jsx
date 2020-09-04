@@ -12,7 +12,7 @@ export default class ContentPokemon extends Component {
         }
     }
     componentDidMount() {
-        let URL = "https://pokeapi.co/api/v2/pokemon?limit=25&offset=0";
+        let URL = "https://pokeapi.co/api/v2/pokemon?limit=25";
 
         fetch(URL, {
             method: "GET",
@@ -59,7 +59,7 @@ export default class ContentPokemon extends Component {
                         pokemones={this.state.pokemones}
                         nombrePoke={this.state.nombrePoke}
                     />
-                     <footer><small>Monica Arbelaez</small></footer>
+                     
                 </div>
             </div>
         )
