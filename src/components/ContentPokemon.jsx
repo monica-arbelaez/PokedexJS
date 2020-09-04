@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InfoPokemon from './infoPokemon';
 import Search from './Search';
 import Image from './../images/pokemon.jpg'
+import './styles/ContentPokemon.css'
 
 export default class ContentPokemon extends Component {
      constructor(props) {
@@ -50,7 +51,7 @@ export default class ContentPokemon extends Component {
         return (
             <div className='total'>
                  <div className='container container-sm  container-fluid contenido-total'>
-                    <div className='titulo'><img src={Image} /></div>
+                    <div className='banner'><img src={Image} /></div>
                     <Search
                         handlerChange={(e) => this.handlerChange(e)}
                         nombrePoke={this.state.nombrePoke}

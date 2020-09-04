@@ -1,10 +1,13 @@
 import React from 'react';
+import './styles/Search.css'
 
 
 const Search=({handlerChange, nombrePoke})=>{
-    return (<div className='buscador'>
-        <label htmlFor='buscarPoke'>Captura tu Pokemon</label>
-        <input type='text' id='buscarPoke' onChange={handlerChange} value={nombrePoke} ></input>
+    return (
+        <div className='search'>
+       
+        <input type='text' id='SearchPok'placeholder="Nombre pokemon" onChange={handlerChange} value={nombrePoke} ></input>
+        <label id='searchLabel' htmlFor='SearchPok'>Busca tu Pokemon</label>
     </div>)
 }
 

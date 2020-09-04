@@ -1,0 +1,6 @@
+body{
+    background: linear-gradient(95deg, rgb(198, 228, 255), rgb(66, 164, 255));
+}
+.banner img{ 
+ width: 100%;
+}
