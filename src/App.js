@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import InfoPokemon from './components/infoPokemon'
+import Detalles from './components/Detalle'
+import { HashRouter, Switch, Route } from "react-router-dom";
+import ContentPokemon from './components/ContentPokemon';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter> {/* envolvemos nuestra aplicación en el Router  */}
+    <Switch> {/* también la envolvemos en el componente Switch */}
+      <Route path="/" component={ContentPokemon} exact /> {/* y creamos nuestras rutas */}
+      <Route path="/InfoPokemon" component={InfoPokemon} exact />
+      <Route path="/InfoPokemon/:informacionId" component={Detalles} exact />
+    </Switch>
+  </HashRouter>
   );
 }
 
