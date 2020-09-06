@@ -1,17 +1,18 @@
-import React from 'react';
-import InfoPokemon from './components/infoPokemon';
-import { HashRouter, Switch, Route } from "react-router-dom";
-import ContentPokemon from './components/ContentPokemon';
-function App() {
-  return (
-    <HashRouter> {/* envolvemos nuestra aplicación en el Router  */}
-    <Switch> {/* también la envolvemos en el componente Switch */}
-      <Route path="/" component={ContentPokemon} exact /> {/* y creamos nuestras rutas */}
-      <Route path="/InfoPokemon" component={InfoPokemon} exact />
-     
-    </Switch>
-  </HashRouter>
-  );
-}
+
+import React from "react";
+import Pokedex from "./Pokedex";
+import Pokemon from "./Pokemon";
+import { Route, Switch } from "react-router-dom";
+
+const App = () => (
+  <Switch>
+    <Route exact path="/" render={(props) => <Pokedex {...props} />} />
+    <Route exact path="/:pokemonId" render={(props) => <Pokemon {...props} />}
+    <Route path="/" component={ContentPokemon} exact /> {/* y creamos nuestras rutas */}
+    <Route path="/InfoPokemon" component={InfoPokemon} exact />
+    />
+  </Switch>
+);
+
 
 export default App;
