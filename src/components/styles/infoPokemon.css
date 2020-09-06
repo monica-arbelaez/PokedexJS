@@ -1,0 +1,54 @@
+.card{
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid rgb(55, 91, 255);
+    background-color: rgb(236, 236, 236);
+}
+.conte-img{
+    background: linear-gradient(90deg, rgb(255, 196, 0), rgb(255, 145, 0));
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+}
+.img{
+   width: 150px;
+
+}
+.text{
+    font-size: 20px;
+    font: weight;
+    text-transform: uppercase;
+    margin-top: -20px;
+    background-color:rgb(0, 173, 204) ;
+    padding: 7px;
+    border-radius: 10px;
+
+   
+}
+@media (max-width: 900px){
+    .conte-img{
+        padding: 0px;
+        width: 150px; 
+    }
+}
+@media (max-width: 731px){
+    .img{
+        width: 80px;
+    }
+    .text{
+        font-size: 13px;
+    }
+    .conte-img{
+        padding: 0px;
+        width: 100px; 
+    }
+    @media (max-width: 731px){
+        .conte-img{
+            width: 90px;   
+        }
+
+    }
+   
+    
+}

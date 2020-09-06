@@ -8,7 +8,7 @@ function App() {
     <Switch> {/* también la envolvemos en el componente Switch */}
       <Route path="/" component={ContentPokemon} exact /> {/* y creamos nuestras rutas */}
       <Route path="/InfoPokemon" component={InfoPokemon} exact />
-      
+     
     </Switch>
   </HashRouter>
   );
