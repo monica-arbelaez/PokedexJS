@@ -33,14 +33,14 @@ const Pokemon = (props) => {
           <img src={front_default} />
         </Typography>
         <img style={{ width: "300px", height: "300px" }} src={fullImageUrl} />
-        <Typography variant="h3">Pokemon Info</Typography>
+        <Typography variant="h3">Info del Pokemon</Typography>
         <Typography>
           {"Species: "}
           <Link href={species.url}>{species.name} </Link>
         </Typography>
-        <Typography>Height: {height} </Typography>
-        <Typography>Weight: {weight} </Typography>
-        <Typography variant="h6"> Types:</Typography>
+        <Typography>Altura: {height} </Typography>
+        <Typography>Peso: {weight} </Typography>
+        <Typography variant="h6"> Tipo:</Typography>
         {types.map((typeInfo) => {
           const { type } = typeInfo;
           const { name } = type;
@@ -54,11 +54,11 @@ const Pokemon = (props) => {
     <>
       {pokemon === undefined && <CircularProgress />}
       {pokemon !== undefined && pokemon && generatePokemonJSX(pokemon)}
-      {pokemon === false && <Typography> Pokemon not found</Typography>}
+      {pokemon === false && <Typography> Pokemon no encontrado</Typography>}
 
       {pokemon !== undefined && (
         <Button variant="contained" onClick={() => history.push("/")}>
-          back to pokedex
+          volver al Pokedex
         </Button>
       )}
     </>
