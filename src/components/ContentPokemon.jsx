@@ -3,6 +3,7 @@ import InfoPokemon from './infoPokemon';
 import Search from './Search';
 import Image from './../images/pokemon.jpg'
 import './styles/ContentPokemon.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class ContentPokemon extends Component {
      constructor(props) {
@@ -50,7 +51,7 @@ export default class ContentPokemon extends Component {
     render() {
         return (
             <div className='total'>
-                 <div className='container container-sm  container-fluid contenido-total'>
+                 <div className='container container-sm container-fluid contenido-total'>
                     <div className='banner'><img src={Image} /></div>
                     <Search
                         handlerChange={(e) => this.handlerChange(e)}
