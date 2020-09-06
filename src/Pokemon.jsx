@@ -35,7 +35,7 @@ const Pokemon = (props) => {
         <img style={{ width: "300px", height: "300px" }} src={fullImageUrl} />
         <Typography variant="h3">Info del Pokemon</Typography>
         <Typography>
-          {"Species: "}
+          {"Especie: "}
           <Link href={species.url}>{species.name} </Link>
         </Typography>
         <Typography>Altura: {height} </Typography>
