@@ -142,10 +142,10 @@ const Pokedex = (props) => {
         
       )}
       
-      <Typography style= {{ padding:"3px", width: "500px",marginTop:"20px ", position: 'absolute', 
+      <Typography style= {{ padding:"3px", width: "500px",marginTop:"20px ",color:"#555555", position: 'absolute', 
         left: '50%', 
         top: '300%',
-        transform: 'translate(-50%, -50%)'}}>Copyright ©2020 Mónica Arbelaáez|Alejandra Quinchia </Typography>
+        transform: 'translate(-50%, -50%)'}}>Copyright ©2020  |  Mónica Arbeláez López |  Alejandra Quinchia </Typography>
       
     </>
   );
