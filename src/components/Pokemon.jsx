@@ -31,25 +31,27 @@ const Pokemon = (props) => {
         top: '50%',
         transform: 'translate(-50%, -50%)'
     }}>
-      <Card  style={{width:"400px", height: "550px", backgroundColor:"orange", color:"white", padding:"20px"}}>
+      <Card  style={{width:"400px", height: "550px", backgroundColor:"#4caf50", color:"white", padding:"20px", borderRadius:"10px"}}>
         <Typography variant="h2" style= {{margin: "20px"}}>
           {`${id}.`} {toFirstCharUppercase(name)}
         </Typography>
-        <img style={{ width: "200px", height: "120px", margin: "10px"}} src={fullImageUrl}/>
+        <img style={{ width: "200px", height: "120px", margin: "10px", backgroundColor:"#f2f2f2", padding:"10px", borderRadius:"10px"}} src={fullImageUrl}/>
         <Typography variant="h4" style= {{margin: "10px"}}>Información</Typography>
-        <Typography style= {{margin: "10px"}}>
+        <div style= {{margin: "10px", margin: "10px"}}>
+        <Typography style= {{backgroundColor:"#c2076c", borderRadius:"10px" , padding:"4px", width: "140px"}}>
           {"Species: "}
           <Link style= {{color: "white"}}href={species.url}>{species.name} </Link>
         </Typography>
-        <Typography style= {{margin: "10px"}}>Altura: {height} </Typography>
-        <Typography style= {{margin: "10px"}}>Peso: {weight} </Typography>
-        <Typography variant="h6" style= {{margin: "10px"}}>Tipo:</Typography>
+        <Typography style= {{backgroundColor:"#00bcd4", borderRadius:"10px" , padding:"3px", width: "70px",marginTop:"5px"}}>Altura: {height} </Typography>
+        <Typography style= {{backgroundColor:"#ff9800", borderRadius:"10px" , padding:"3px", width: "90px",marginTop:"5px"}}>Peso: {weight} </Typography>
+        <Typography variant="h6" style= {{backgroundColor:"#006064", borderRadius:"10px" , padding:"3px", width: "50px",marginTop:"5px"}}>Tipo:</Typography>
         {types.map((typeInfo) => {
           const { type } = typeInfo;
           const { name } = type;
-          return <Typography style= {{margin: "10px"}} key={name}>{`${name}`}
+          return <Typography style= {{backgroundColor:"#cddc39", borderRadius:"10px" , padding:"3px", width: "50px",marginTop:"5px"}} key={name}>{`${name}`}
           </Typography>;
         })}
+        </div>
       </Card>
       </div> 
     );

@@ -9,6 +9,7 @@ import {
   Toolbar,
   AppBar,
   TextField,
+  
 } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { toFirstCharUppercase } from "./constants";
@@ -28,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     textAlign: "center",
-    backgroundColor:"red",
   },
   searchContainer: {
     display: "flex",
@@ -96,7 +96,7 @@ const Pokedex = (props) => {
             image={sprite}
             style={{ width: "120px", height: "130px" }}
           />
-          <CardContent className={classes.cardContent}>
+          <CardContent style={{width:"100%", height: "20px", backgroundColor:"#75b42c", color:"white", padding:"5px"}}className={classes.cardContent}>
             <Typography>{`${id}. ${toFirstCharUppercase(name)}`}</Typography>
           </CardContent>
         </Card>
@@ -113,7 +113,7 @@ const Pokedex = (props) => {
           src={Image}
         />
       </div>
-      <AppBar position="static" style={{ backgroundColor: "red" }}>
+      <AppBar position="static" style={{ backgroundColor: "#d32f2f" }}>
         <Toolbar>
           <div className={classes.searchContainer}>
             <SearchIcon className={classes.searchIcon} />
@@ -128,7 +128,7 @@ const Pokedex = (props) => {
       </AppBar>
       
       {pokemonData ? (
-        <Grid container spacing={2} className={classes.pokedexContainer}>
+        <Grid container spacing={2} className={classes.pokedexContainer}style={{ backgroundColor: "#f2f2f2" }}>
           {Object.keys(pokemonData).map(
             (pokemonId) =>
               pokemonData[pokemonId].name.includes(filter) &&
@@ -136,9 +136,17 @@ const Pokedex = (props) => {
            
           )}
         </Grid>
+        
       ) : (
         <CircularProgress />
+        
       )}
+      
+      <Typography style= {{ padding:"3px", width: "500px",marginTop:"20px ", position: 'absolute', 
+        left: '50%', 
+        top: '300%',
+        transform: 'translate(-50%, -50%)'}}>Copyright ©2020 Mónica Arbelaáez|Alejandra Quinchia </Typography>
+      
     </>
   );
 };
